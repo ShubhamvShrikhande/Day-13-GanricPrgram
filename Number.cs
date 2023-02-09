@@ -8,22 +8,25 @@ namespace Gnric
 {
     public class Number
     {
-        public static float MaximumFloatNum(float firstValue, float secondValue, float thirdValue)
+        public static string MaximumStringNum(string Apple, string Peach, string Banana)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            if (Apple.CompareTo(Peach) > 0 && Apple.CompareTo(Banana) > 0)
 
             {
-                return firstValue;
+                return Apple;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            if (Peach.CompareTo(Apple) > 0 && Peach.CompareTo(Banana) > 0)
             {
-                return secondValue;
+                return Peach;
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+            if (Banana.CompareTo(Apple) > 0 && Banana.CompareTo(Peach) > 0)
             {
-                return thirdValue;
+                return Banana;
             }
-            return firstValue;
+            return Apple;
         }
+
+
+        
     }
 }
