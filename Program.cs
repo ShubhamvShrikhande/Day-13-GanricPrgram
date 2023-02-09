@@ -7,12 +7,11 @@ namespace Gnric
     {
         static void Main(string[] args)
         {
-
-            int output =Number.GetMaximum<int>(15, 25, 35);
+            int output = Number<int>.GetMaximum(15, 25, 5);
             Console.WriteLine($"max={output}");
-            float output1 = Number.GetMaximum<float>(15.5f, 35.5f, 25.5f);
+            float output1 = Number<float>.GetMaximum(15.5f, 253.5f, 3.5f);
             Console.WriteLine($"max={output1}");
-            string output2 = Number.GetMaximum<string>("abc", "xyz", "pqr");
+            string output2 = Number<string>.GetMaximum("abc", "pqr", "lmn");
             Console.WriteLine($"max={output2}");
 
         }

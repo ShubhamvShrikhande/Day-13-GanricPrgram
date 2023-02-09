@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Gnric
 {
-    public class Number
-    {
-        
-            public static T GetMaximum<T>(T first_Value, T second_Value, T third_Value) where T : IComparable<T>
+        public class Number<T> where T : IComparable<T>
+        {
+            private T first_Value;
+            private T second_Value;
+            private T third_Value;
+            public Number(T first_Value, T second_Value, T third_Value)
+            {
+                this.first_Value = first_Value;
+                this.second_Value = second_Value;
+                this.third_Value = third_Value;
+            }
+            public static T GetMaximum(T first_Value, T second_Value, T third_Value)
             {
                 if (first_Value.CompareTo(second_Value) > 0 && first_Value.CompareTo(third_Value) > 0)
                 {
@@ -25,12 +33,10 @@ namespace Gnric
                 }
                 else
                 {
-                    throw new Exception("Values are The same");
+                    throw new Exception("Values are same");
                 }
+
             }
-        
 
-
-
-    }
+        }
 }
